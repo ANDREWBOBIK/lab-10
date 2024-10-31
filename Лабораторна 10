@@ -1,0 +1,11 @@
+def first_student():
+    try:
+        # Создаём файл и записываем информацию от первого студента
+        with open("students_questions.txt", "w") as file:
+            file.write("Прізвище: Андрій\n")
+            file.write("Питання: Як працює оператор if у Python?\n")
+            file.write("Відповідь: \n")  # Место для ответа второго студента
+            file.write("=" * 40 + "\n")
+        print("Файл создан и вопрос записан.")
+    except IOError as e:
+        print("Ошибка при работе с файлом:", e)
