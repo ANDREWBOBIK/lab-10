@@ -9,3 +9,18 @@ def first_student():
         print("Файл создан и вопрос записан.")
     except IOError as e:
         print("Ошибка при работе с файлом:", e)
+def second_student():
+    try:
+        # Открываем файл и дополняем ответом от второго студента
+        with open("students_questions.txt", "a") as file:
+            file.write("Прізвище: Олександр\n")
+            file.write("Відповідь: Оператор if у Python позволяет выполнять условное выполнение кода. "
+                       "Если условие истинно, выполняется код в блоке if.\n")
+            file.write("=" * 40 + "\n")
+        print("Ответ записан.")
+    except IOError as e:
+        print("Ошибка при работе с файлом:", e)
+
+# Выполнение функций для первого и второго студентов
+first_student()
+second_student()
